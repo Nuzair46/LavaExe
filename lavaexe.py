@@ -4,8 +4,15 @@ class Start():
 	def update():
 		print("[INFO] Removing existing Lavalink (If any).")
 		system("rm Lavalink.jar")
+		x = int(input("[1] - Master Build\n[2] - Dev Build\n: "))
 		try:
-			system("curl -L https://github.com/freyacodes/Lavalink/releases/latest/download/Lavalink.jar -O")
+			if x == 1:
+				system("curl -L https://github.com/freyacodes/Lavalink/releases/latest/download/Lavalink.jar -O")
+			elif x == 2:
+				system("curl -L https://ci.fredboat.com/guestAuth/repository/download/Lavalink_Build/.lastFinished/Lavalink.jar -O")
+			else:
+				print("invalid choice.")
+				exit()
 			print("[INFO] Update complete...")
 			Start.run()
 		except Exception as e:
