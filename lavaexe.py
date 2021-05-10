@@ -9,7 +9,7 @@ class Start():
 			if x == 1:
 				system("curl -L https://github.com/freyacodes/Lavalink/releases/latest/download/Lavalink.jar -O")
 			elif x == 2:
-				system("curl -L https://ci.fredboat.com/guestAuth/repository/download/Lavalink_Build/.lastFinished/Lavalink.jar -O")
+				system("curl -L https://ci.fredboat.com/guestAuth/repository/download/Lavalink_Build/8845:id/Lavalink.jar -O")
 			else:
 				print("invalid choice.")
 				exit()
